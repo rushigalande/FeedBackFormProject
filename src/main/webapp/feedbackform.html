@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <style>
+  /* Add your CSS styles here */
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .rating-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-option i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .rating-option i.far {
+    color: #ccc;
+  }
+
+  .rating-option i.fas {
+    color: #ffc107;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .rating {
+  display: flex;
+  justify-content:flex-start;
+ 
+}
+
+.full-star {
+  color:gold;
+  
+}
+
+input[type="radio"]:checked + .full-star {
+  color: #ff0;
+}
+  
+</style>
+
+</head>
+
+
+<body>
+  <h1>Feedback Form</h1>
+  <form action="FeedbackServlet" method="post">
+    <label for="username">Enter Your Name:</label>
+    <input type="text" id="username" name="username">
+    <br><br>
+    <div class="rating">
+  <input type="radio" id="star5" name="rating" value="5" />
+  <label for="star5" class="full-star">&#9733</label>
+  
+  <input type="radio" id="star4" name="rating" value="4" />
+  <label for="star4" class="full-star">&#9733</label>
+  
+  <input type="radio" id="star3" name="rating" value="3" />
+  <label for="star3" class="full-star">&#9733</label>
+  
+  <input type="radio" id="star2" name="rating" value="2" />
+  <label for="star2" class="full-star">&#9733</label>
+  
+  <input type="radio" id="star1" name="rating" value="1" />
+  <label for="star1" class="full-star">&#9733</label>
+</div>
+
+
+<br><br>
+<label for="feedback">Feedback:</label>
+<textarea id="feedback" name="feedback"></textarea>
+<br><br>
+<input type="submit" value="Submit" id="submit-button">
+</form>
+
+ 
+</body>
+</html>
